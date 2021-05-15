@@ -1,6 +1,6 @@
 package com.rafantasy.userservice.security.controller;
 
-import com.acyuta.userservice.security.dto.*;
+import com.rafantasy.userservice.security.dto.*;
 import com.rafantasy.userservice.security.enums.TokenType;
 import com.rafantasy.userservice.security.service.AuthService;
 import com.rafantasy.userservice.security.dto.*;

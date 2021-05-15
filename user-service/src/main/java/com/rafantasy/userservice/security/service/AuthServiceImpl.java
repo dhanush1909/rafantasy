@@ -8,7 +8,7 @@ import com.rafantasy.userservice.domain.model.User;
 import com.rafantasy.userservice.domain.service.UserRepository;
 import com.rafantasy.userservice.security.JwtUtils;
 import com.rafantasy.userservice.security.UserDetailsImpl;
-import com.acyuta.userservice.security.dto.*;
+import com.rafantasy.userservice.security.dto.*;
 import com.rafantasy.userservice.security.enums.TokenType;
 import com.rafantasy.userservice.security.model.RefreshToken;
 import com.rafantasy.userservice.common.Constants;
