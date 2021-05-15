@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_DB_HOST}:3306/user-service
+    username: ${MYSQL_DB_USER}
+    password: ${MYSQL_DB_PASSWORD}
+    tomcat:
+      max-wait: 60000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      generate-ddl: true
+    properties:
+      hibernate.implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+      hibernate.physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+  sleuth:
+    sampling:
+      probability: 1.0
+
+  mail:
+    protocol: smtp
+    host: smtp.mailtrap.io
+    port: 2525
+    username: ${MAIL_TRAP_USERNAME_CRED}
+    password: ${MAIL_TRAP_PASSWORD_CRED}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+          starttls:
+            enable: true
+server:
+  error:
+    include-message: always
+  port: 8000
+
+
+user-service-properties:
+  jwt-secret: ${JWT_SECRET}
+  jwt-expiry-time-in-ms: ${JWT_EXPIRY_TIME_IN_MS}
+  front-end-url: ${FRONT_END_URL}
+  refreshTokenExpiryTimeInMs: 3600000
