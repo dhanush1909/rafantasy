@@ -2,11 +2,23 @@ spring:
   application:
     name: Rafantasy Liquibase Application
 
+  datasource:
+    url: jdbc:postgresql://localhost:5430/rafantasy?applicationName=rafantasy-user-service
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    platform: postgres
+    initialization-mode: never
+    tomcat:
+      max-wait: 60000
+
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
+
 server:
   port: 7000
 
   datasource:
     url: jdbc:postgresql://localhost:5430/rafantasy?applicationName=rafantasy-liquibase-app
 
-  liquibase:
-    change-log: classpath:/db/changelog/db.changelog-master.xml
+
