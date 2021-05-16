@@ -1,7 +1,7 @@
-package com.rafantasy.userservice.domain.converter;
+package com.rafantasy.userservice.user.converter;
 
-import com.rafantasy.userservice.domain.model.User;
-import com.rafantasy.userservice.domain.service.UserRepository;
+import com.rafantasy.userservice.user.model.User;
+import com.rafantasy.userservice.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.http.HttpStatus;

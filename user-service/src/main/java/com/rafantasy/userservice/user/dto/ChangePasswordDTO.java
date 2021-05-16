@@ -1,4 +1,4 @@
-package com.rafantasy.userservice.domain.dto;
+package com.rafantasy.userservice.user.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

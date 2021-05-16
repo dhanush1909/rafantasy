@@ -1,6 +1,7 @@
-package com.rafantasy.userservice.domain.model;
+package com.rafantasy.userservice.user.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.rafantasy.userservice.role.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,9 +16,6 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * User Model.
- */
 @Entity
 @Table(name = "users")
 @Getter

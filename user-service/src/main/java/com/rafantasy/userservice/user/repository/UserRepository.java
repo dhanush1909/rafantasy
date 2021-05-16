@@ -1,6 +1,6 @@
-package com.rafantasy.userservice.domain.service;
+package com.rafantasy.userservice.user.repository;
 
-import com.rafantasy.userservice.domain.model.User;
+import com.rafantasy.userservice.user.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

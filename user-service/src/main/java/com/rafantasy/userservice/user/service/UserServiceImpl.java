@@ -1,10 +1,11 @@
-package com.rafantasy.userservice.domain.service;
+package com.rafantasy.userservice.user.service;
 
-import com.rafantasy.userservice.domain.converter.RoleConverter;
-import com.rafantasy.userservice.domain.dto.ChangePasswordDTO;
-import com.rafantasy.userservice.domain.model.Role;
-import com.rafantasy.userservice.domain.model.RoleType;
-import com.rafantasy.userservice.domain.model.User;
+import com.rafantasy.userservice.role.converter.RoleConverter;
+import com.rafantasy.userservice.user.dto.ChangePasswordDTO;
+import com.rafantasy.userservice.role.Role;
+import com.rafantasy.userservice.role.RoleType;
+import com.rafantasy.userservice.user.model.User;
+import com.rafantasy.userservice.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;

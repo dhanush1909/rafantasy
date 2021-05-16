@@ -15,8 +15,6 @@ public class LoginResponseDTO {
 
     private String username;
 
-//    private Integer id;
-
     private String jwt;
 
     private String roles;

@@ -1,7 +1,7 @@
-package com.rafantasy.userservice.domain.service;
+package com.rafantasy.userservice.user.service;
 
-import com.rafantasy.userservice.domain.dto.ChangePasswordDTO;
-import com.rafantasy.userservice.domain.model.User;
+import com.rafantasy.userservice.user.dto.ChangePasswordDTO;
+import com.rafantasy.userservice.user.model.User;
 
 import java.util.List;
 
