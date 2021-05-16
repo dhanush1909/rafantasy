@@ -1,8 +1,7 @@
-package com.rafantasy.userservice.security.service;
+package com.rafantasy.userservice.security;
 
-import com.rafantasy.userservice.user.repository.UserRepository;
+import com.rafantasy.userservice.domain.service.UserRepository;
 import com.rafantasy.userservice.common.Constants;
-import com.rafantasy.userservice.security.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.userdetails.UserDetails;

@@ -1,7 +1,7 @@
-package com.rafantasy.userservice.role.converter;
+package com.rafantasy.userservice.domain.converter;
 
-import com.rafantasy.userservice.role.Role;
-import com.rafantasy.userservice.role.RoleType;
+import com.rafantasy.userservice.domain.model.Role;
+import com.rafantasy.userservice.domain.model.RoleType;
 import com.rafantasy.userservice.domain.service.RoleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.convert.converter.Converter;

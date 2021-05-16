@@ -1,7 +1,7 @@
-package com.rafantasy.userservice.security.repository;
+package com.rafantasy.userservice.security.service;
 
+import com.rafantasy.userservice.domain.model.User;
 import com.rafantasy.userservice.security.model.RefreshToken;
-import com.rafantasy.userservice.user.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
