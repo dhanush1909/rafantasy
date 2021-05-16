@@ -1,6 +1,5 @@
 package com.rafantasy.userservice.security;
 
-import com.rafantasy.userservice.security.filters.JwtValidationFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
