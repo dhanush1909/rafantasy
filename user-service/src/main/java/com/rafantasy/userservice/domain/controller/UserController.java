@@ -1,19 +1,14 @@
 package com.rafantasy.userservice.domain.controller;
 
 import com.rafantasy.userservice.domain.dto.ChangePasswordDTO;
-import com.rafantasy.userservice.domain.model.Image;
 import com.rafantasy.userservice.domain.model.User;
-import com.rafantasy.userservice.domain.service.ImageRepository;
 import com.rafantasy.userservice.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -26,8 +21,6 @@ import java.util.List;
 public class UserController {
 
     private final UserService userService;
-
-    private final ImageRepository imageRepository;
 
     /**
      * Fetches all the users.
@@ -87,36 +80,4 @@ public class UserController {
         userService.toggleAdmin(user);
     }
 
-    @PreAuthorize("hasRole('USER')")
-    @PostMapping("/{username}/upload-image")
-    public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile image, @PathVariable("username") User user) {
-        System.out.println(user.getId());
-        try {
-            imageRepository.save(new Image()
-                    .setUserId(user.getId())
-                    .setImageBytes(image.getBytes()));
-        } catch (IOException e) {
-            log.error("Error while uploading image - ", e.getMessage());
-        }
-        return ResponseEntity.ok("Saved image");
-    }
-
-    @PreAuthorize("hasRole('USER')")
-    @GetMapping("/{username}/get-images")
-    public List<Image> uploadImage(@PathVariable("username") User user) {
-        return imageRepository.findAllByUserId(user.getId());
-    }
-
-    @PreAuthorize("hasRole('USER')")
-    @GetMapping("/{username}/get-images/{imageId}")
-    public Image getImage(@PathVariable("username") User user, @PathVariable("imageId") Image image) {
-        return image;
-    }
-
-    @PreAuthorize("hasRole('USER')")
-    @DeleteMapping("/{username}/get-images/{imageId}")
-    public ResponseEntity<String> deleteImage(@PathVariable("username") User user, @PathVariable("imageId") Image image) {
-        imageRepository.delete(image);
-        return ResponseEntity.ok("deleted");
-    }
 }
