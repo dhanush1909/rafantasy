@@ -1,6 +1,6 @@
 package com.rafantasy.userservice.security;
 
-import com.rafantasy.userservice.domain.model.User;
+import com.rafantasy.userservice.user.model.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
