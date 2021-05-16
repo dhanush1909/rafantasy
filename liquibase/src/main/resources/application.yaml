@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Rafantasy Liquibase Application
+
+server:
+  port: 7000
+
+  datasource:
+    url: jdbc:postgresql://localhost:5430/rafantasy?applicationName=rafantasy-liquibase-app
+
+  liquibase:
+    change-log: classpath:/db/changelog/db.changelog-master.xml
