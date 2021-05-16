@@ -1,4 +1,4 @@
-package com.rafantasy.userservice.role;
+package com.rafantasy.userservice.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

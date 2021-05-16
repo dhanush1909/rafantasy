@@ -1,4 +1,4 @@
-package com.rafantasy.userservice.role;
+package com.rafantasy.userservice.domain.model;
 
 /**
  * Role Types.

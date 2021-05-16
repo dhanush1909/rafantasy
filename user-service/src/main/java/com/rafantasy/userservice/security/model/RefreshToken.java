@@ -1,6 +1,6 @@
 package com.rafantasy.userservice.security.model;
 
-import com.rafantasy.userservice.user.model.User;
+import com.rafantasy.userservice.domain.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
