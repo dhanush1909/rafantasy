@@ -37,7 +37,7 @@ spring:
 server:
   error:
     include-message: always
-  port: 8000
+  port: 8081
 
 
 user-service-properties:
@@ -45,3 +45,10 @@ user-service-properties:
   jwt-expiry-time-in-ms: ${JWT_EXPIRY_TIME_IN_MS}
   front-end-url: ${FRONT_END_URL}
   refreshTokenExpiryTimeInMs: 3600000
+
+
+keycloak:
+  auth-server-url: http://localhost:8180/auth
+  realm: Rafantasy
+  resource: user-service
+  public-client: true
