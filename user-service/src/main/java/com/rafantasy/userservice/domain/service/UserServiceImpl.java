@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 
     private final RoleConverter roleConverter;
 
-    private final PasswordEncoder passwordEncoder;
+//    private final PasswordEncoder passwordEncoder;
 
     @Override
     public List<User> fetchAllUsers() {
@@ -53,9 +53,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public void changePassword(User user, ChangePasswordDTO changePasswordDTO) {
 
-        if (!passwordEncoder.matches(changePasswordDTO.getOldPassword(), user.getPassword()))
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, WRONG_PASSWORD_PROVIDED);
-
-        userRepository.save(user.setPassword(passwordEncoder.encode(changePasswordDTO.getNewPassword())));
     }
+
+//    @Override
+//    public void changePassword(User user, ChangePasswordDTO changePasswordDTO) {
+//
+//        if (!passwordEncoder.matches(changePasswordDTO.getOldPassword(), user.getPassword()))
+//            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, WRONG_PASSWORD_PROVIDED);
+//
+//        userRepository.save(user.setPassword(passwordEncoder.encode(changePasswordDTO.getNewPassword())));
+//    }
 }
