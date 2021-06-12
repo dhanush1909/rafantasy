@@ -1,5 +1,6 @@
 package com.rafantasy.userservice.security.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,16 +14,22 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 public class LoginResponseDTO {
 
-    private String username;
+    @JsonProperty("token_type")
+    private String tokenType;
 
-//    private Integer id;
+    @JsonProperty("access_token")
+    private String accessToken;
 
-    private String jwt;
+    @JsonProperty("expires_in")
+    private Long expiresIn;
 
-    private String roles;
-
-    private Long expiryTime;
-
+    @JsonProperty("refresh_token")
     private String refreshToken;
+
+    @JsonProperty("refresh_expires_in")
+    private Long refreshExpiresIn;
+
+    @JsonProperty("session_state")
+    private String sessionState;
 
 }
