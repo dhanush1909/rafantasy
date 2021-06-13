@@ -4,6 +4,17 @@ Using KeyCloak for authentication and authorization purposes.
 
 Steps (will be updated later, once everything is in place):
 
+- Download the keyCloak zip from http://www.keycloak.org/downloads.html
+- unzip and start keycloak server using the below commands
+  ```
+  unzip keycloak-13.0.1.zip 
+  cd keycloak-13.0.1/bin
+  standalone.sh -Djboss.socket.binding.port-offset=100
+  ```
+  - After running ./standalone.sh, Keycloak will be starting its services in port 8180. Once we see a line containing Keycloak 13.0.1started, we'll know its start-up is complete.
+- open http://localhost:8180 in browser. When visiting for first it is necessary to create an administrative login
+  - Let's create an initial admin user named ```admin``` with the password ```admin```. Upon clicking Create
+- Proceed to login and signin with the above credentials
 - Create a realm on KeyCloak called "Rafantasy"
 - Create a new Client called "user-service"  
 - Add a new role, "user". 
