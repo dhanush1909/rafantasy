@@ -27,7 +27,7 @@ Steps (will be updated later, once everything is in place):
         * client_id: user-service
         * username: user1
         * password: xsw2@WSX
-        * grant_type: xsw2@WSX
+        * grant_type: password
     
   * Use this endpoint to check if the bearer token works:
     * http://localhost:8081/api/users
