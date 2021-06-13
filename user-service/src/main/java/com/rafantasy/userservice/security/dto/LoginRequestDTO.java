@@ -1,5 +1,6 @@
 package com.rafantasy.userservice.security.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,4 +19,8 @@ public class LoginRequestDTO {
 
     @NotBlank(message = "login.request.password.empty")
     private String password;
+
+    private String client_id;
+
+    private String grant_type;
 }
