@@ -13,7 +13,7 @@ Steps (will be updated later, once everything is in place):
   standalone.sh -Djboss.socket.binding.port-offset=100
   ```
   - After running ./standalone.sh, Keycloak will be starting its services in port 8180. Once we see a line containing Keycloak 13.0.1started, we'll know its start-up is complete.
-- open http://localhost:8180 in browser. When visiting for first it is necessary to create an administrative login
+- open http://localhost:8180 in browser. When visiting for first time it is necessary to create an administrative login
   - Let's create an initial admin user named ```admin``` with the password ```admin```. Upon clicking Create
 - Proceed to login and signin with the above credentials
 - Create a realm on KeyCloak called "Rafantasy"
