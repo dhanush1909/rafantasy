@@ -2,6 +2,7 @@
 
 Using KeyCloak for authentication and authorization purposes.
 
+This process will be dockerized later
 Steps (will be updated later, once everything is in place):
 
 - Download the keyCloak zip from http://www.keycloak.org/downloads.html
