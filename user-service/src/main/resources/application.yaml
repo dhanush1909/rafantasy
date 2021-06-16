@@ -1,6 +1,13 @@
 spring:
   application:
     name: user-service
+  security:
+    oauth2:
+      resourceserver:
+        opaque:
+          introspection-uri: http://localhost:8180/auth/realms/Rafantasy/protocol/openid-connect/token/introspect
+          introspection-client-id: user-service
+          introspection-client-secret: 0eb75b3c-d42c-483b-acf9-cee71c718926
 
   datasource:
     url: jdbc:postgresql://localhost:5430/rafantasy?applicationName=rafantasy-user-service
@@ -47,8 +54,8 @@ user-service-properties:
   refreshTokenExpiryTimeInMs: 3600000
 
 
-keycloak:
-  auth-server-url: http://localhost:8180/auth
-  realm: Rafantasy
-  resource: user-service
-  public-client: true
+#keycloak:
+#  auth-server-url: http://localhost:8180/auth
+#  realm: Rafantasy
+#  resource: user-service
+#  public-client: true
