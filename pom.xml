@@ -15,7 +15,7 @@
 	<name>Rafantasy Parent Project</name>
 
 	<modules>
-		<module>user-service</module>
+		<module>api-service</module>
 		<module>liquibase</module>
 	</modules>
 	<properties>
