@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication()
-@ComponentScan(basePackages = {""})
+@ComponentScan(basePackages = {})
 public class LiquibaseApplication {
     public static void main(String[] args) {
         SpringApplication.run(LiquibaseApplication.class, args);
