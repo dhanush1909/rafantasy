@@ -1,4 +1,4 @@
-package com.rafantasy.userservice.common;
+package com.rafantasy.shared.common;
 
 /**
  * This class contains all of the constants.

@@ -17,7 +17,9 @@
 	<modules>
 		<module>api-service</module>
 		<module>liquibase</module>
-	</modules>
+        <module>shared</module>
+    </modules>
+
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2020.0.0</spring-cloud.version>
