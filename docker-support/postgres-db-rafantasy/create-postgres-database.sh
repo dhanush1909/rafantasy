@@ -1,6 +1,4 @@
 #!/usr/bash
-set -e
-set -U
 
 function create_user_and_database() {
     local database=$1

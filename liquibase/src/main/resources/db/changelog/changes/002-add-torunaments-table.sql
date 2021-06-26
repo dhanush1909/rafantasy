@@ -8,5 +8,6 @@ create table tournaments (
 	month1 int,
 	month2 int,
 	month3 int,
+	type varchar(128) not null,
 	constraint tournaments_pkey primary key (id)
 );
