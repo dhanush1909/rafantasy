@@ -1,6 +1,21 @@
-server:
-  port: 8002
-
 spring:
   application:
     name: scheduler
+  datasource:
+    url: jdbc:postgresql://localhost:5430/rafantasy?applicationName=scheduler-service
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+    platform: postgres
+    initialization-mode: never
+    tomcat:
+      max-wait: 60000
+
+server:
+  port: 8002
+
+livescore-api:
+  base-url: https://livescore6.p.rapidapi.com/matches/v2
+  x-rapidapi-key: 6809488b40msh5870951f23f1b4dp117513jsn564f929e06f2
+  category: tennis
+
